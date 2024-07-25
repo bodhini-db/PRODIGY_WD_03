@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+#menu {
+    margin-bottom: 20px;
+}
+
+#menu button, #back-to-menu, #restart {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+#menu button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#back-to-menu {
+    background-color: #f44336;
+    color: white;
+}
+
+#restart {
+    background-color: #2196F3;
+    color: white;
+}
+
+.scores {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+
+#score-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    flex-direction: column; /* Stack the buttons vertically */
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#back-to-menu, #restart {
+    margin-top: 10px;
+}
+
+
+
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #000;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+.cell.X {
+    color: #d32f2f;
+}
+
+.cell.O {
+    color: #1976d2;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: row; /* Arrange game board and leaderboard side by side */
+    align-items: center;
+}
+
+.restart-container {
+    margin-bottom: 20px;
+}
+
+#leaderboard-container {
+    margin-left: 20px; /* Space between game board and leaderboard */
+}
+
+#leaderboard {
+    border-collapse: collapse;
+    width: 200px;
+    text-align: left;
+}
+
+#leaderboard th, #leaderboard td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#leaderboard th {
+    background-color: #f4f4f4;
+}
